@@ -3,6 +3,21 @@ package homework4;
 import java.util.*;
 
 public class MaxAndMin {
+	
+	public static boolean isNumber(String str) {
+        if(str==null || str.equals(""))
+            return false;
+    
+        for(int i=0; i<str.length(); i++) {
+            char ch = str.charAt(i);
+            
+            if(ch<'0' || ch>'9') {
+                return false;
+            }
+        }
+        return true;
+    }
+	
 	String inputNum;
 	int max=0, min=100;
 	int temp;
@@ -14,7 +29,7 @@ public class MaxAndMin {
 			this.inputNum = s.nextLine();
 			if(this.inputNum.equals("Q") || this.inputNum.equals("q"))
 				break;
-			else if(Integer.parseInt(this.inputNum)>100 || Integer.parseInt(this.inputNum)<0)
+			else if(!isNumber(inputNum) || Integer.parseInt(this.inputNum)>100 || Integer.parseInt(this.inputNum)<0)
 			{
 				System.out.println("0에서 100 사이의 숫자만 입력하셔야 합니다.");
 				continue;

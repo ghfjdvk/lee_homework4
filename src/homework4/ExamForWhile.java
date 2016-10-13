@@ -4,8 +4,22 @@ import java.util.*;
 
 public class ExamForWhile {
 
+	public static boolean isNumber(String str) {
+	        if(str==null || str.equals(""))
+	            return false;
+	    
+	        for(int i=0; i<str.length(); i++) {
+	            char ch = str.charAt(i);
+	            
+	            if(ch<'0' || ch>'9') {
+	                return false;
+	            }
+	        }
+	        return true;
+	    }
+	
 	public static void main(String[] args){
-		int selected;
+		String selected;
 		Scanner s = new Scanner(System.in);
 		do{
 			System.out.println("1. 1부터 입력한 수까지 더하기");
@@ -15,26 +29,30 @@ public class ExamForWhile {
 			System.out.println("5. 짝수단/홀수단 출력하기");
 			System.out.println("6. 프로그램 종료");
 			System.out.println("원하는 메뉴는 >> ");
-			selected = s.nextInt();
-			if(selected == 1)
+			selected = s.nextLine();
+			if(!isNumber(selected) || Integer.parseInt(selected) > 6 || Integer.parseInt(selected) < 1){
+				System.out.println("잘못 입력하셨습니다. 다시 입력 바랍니다.");
+				continue;
+			}
+			if(Integer.parseInt(selected) == 1)
 				new SumOfNumbers().input();
-			else if(selected == 2)
+			else if(Integer.parseInt(selected) == 2)
 				new MaxAndMin().input();
 			
-			else if(selected == 3)
+			else if(Integer.parseInt(selected) == 3)
 				new SumAndAvg().input();
-			/*
-			else if(selected == 4)
+			
+			else if(Integer.parseInt(selected) == 4)
 				new GuGuDan().input();
-			else if(selected == 5)
+			/*
+			else if(Integer.parseInt(selected) == 5)
 				new GuGuDan2().input();
 			*/
-			else if(selected == 6){
+			else if(Integer.parseInt(selected) == 6){
 				System.out.println("프로그램을 종료합니다.");
 				System.exit(0);
 			}
-			else
-				System.out.println("잘못 입력하셨습니다. 다시 입력 바랍니다.");
-		} while(selected != 6);
+			
+		} while(true);
 	}
 }
