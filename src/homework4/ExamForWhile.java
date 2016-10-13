@@ -48,6 +48,7 @@ public class ExamForWhile {
 				new GuGuDan2().input();
 			else if(Integer.parseInt(selected) == 6){
 				System.out.println("프로그램을 종료합니다.");
+				s.close();
 				System.exit(0);
 			}
 			
