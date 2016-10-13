@@ -20,9 +20,10 @@ public class ExamForWhile {
 				new SumOfNumbers().input();
 			else if(selected == 2)
 				new MaxAndMin().input();
-			/*
+			
 			else if(selected == 3)
 				new SumAndAvg().input();
+			/*
 			else if(selected == 4)
 				new GuGuDan().input();
 			else if(selected == 5)
