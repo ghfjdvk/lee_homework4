@@ -18,8 +18,9 @@ public class ExamForWhile {
 			selected = s.nextInt();
 			if(selected == 1)
 				new SumOfNumbers().input();
-			/*else if(selected == 2)
+			else if(selected == 2)
 				new MaxAndMin().input();
+			/*
 			else if(selected == 3)
 				new SumAndAvg().input();
 			else if(selected == 4)
