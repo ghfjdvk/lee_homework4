@@ -1,6 +1,6 @@
 package homework4;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class GuGuDan {
 
