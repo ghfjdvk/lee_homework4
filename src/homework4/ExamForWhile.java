@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ExamForWhile {
 
-	public static boolean isNumber(String str) {
+	public static boolean isNumber(String str){
 	        if(str==null || str.equals(""))
 	            return false;
 	    
